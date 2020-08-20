@@ -22,31 +22,42 @@ var totalRight = 0;
 var totalWrong = 0;
 
 var questions = [
-    {
-        question: "Who won the superbowl in 2015", 
-        choices: [ "Patriots", "Broncos", "Vikings", "Packers"],
-        correctanswer: "Patriots"
-    },
-    {
-        question: "How many rings does Michael Jordan have?",
-        choices: [ "6", "5", "3", "0"],
-        correctanswer: "6"
-    },
-]
+   {
+       question: "Who won the superbowl in 2015", 
+       choices: [ "Patriots", "Broncos", "Vikings", "Packers"],
+       correctanswer: "Patriots"
+   },
+   {
+       question: "How many rings does Michael Jordan have?",
+       choices: [ "6", "5", "3", "0"],
+       correctanswer: "6"
+   },
+   {
+       question: "What year did Adrian Peterson win MVP?", 
+       choices: [ "2018", "2012", "2015", "2013"],
+       correctanswer: "2012"
+   },
+   {
+       question: "Stephen Curry and Kevin Durant won how many titles together?", 
+       choices: [ "4", "3", "2", "0"],
+       correctanswer: "2"
+   }, 
+];
+
 start.onclick = StartQuiz;
-// opt1.onclick = clickAnswer;
-// opt2.onclick = clickAnswer;
-// opt3.onclick = clickAnswer;
-// opt4.onclick = clickAnswer;
-// container.style.display = "none";  
-// resultCont.style.display = "none";
+ opt1.onclick = clickAnswer;
+ opt2.onclick = clickAnswer;
+ opt3.onclick = clickAnswer;
+ opt4.onclick = clickAnswer;
+ container.style.display = "none";  
+ resultCont.style.display = "none";
 
 function loadQuestion()  {
     var q = questions[questionIndex];
-    for (var i = 0; i < questions.length; i++){
-        var question1 = document.createElement("h3");
-        question1.textContent=questions[i].question;
-        var choicenode = document.createElement("div")
+    //for (var i = 0; i < questions.length; i++){
+       // var question1 = document.createElement("h3");
+        //question1.textContent=questions[i].question;
+        //var choicenode = document.createElement("div")
 
         
     
@@ -58,17 +69,16 @@ function loadQuestion()  {
         //     choicenode.append(choices1);
             
         // }
-        question1.append(choicenode)
-        quiz.append(question1);
+        //question1.append(choicenode)
+        //quiz.append(question1);
     
 
-    }
     
-	// questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
-	// opt1.textContent = q.choices[0]
-	// opt2.textContent = q.choices[1];
-	// opt3.textContent = q.choices[2];
-	// opt4.textContent = q.choices[3];
+	 questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
+     opt1.textContent = q.choices[0]
+	 opt2.textContent = q.choices[1];
+	 opt3.textContent = q.choices[2];
+	 opt4.textContent = q.choices[3];
 };
 function displayTime() {
     timer.textContent = timerCounter
