@@ -54,27 +54,7 @@ start.onclick = StartQuiz;
 
 function loadQuestion()  {
     var q = questions[questionIndex];
-    //for (var i = 0; i < questions.length; i++){
-       // var question1 = document.createElement("h3");
-        //question1.textContent=questions[i].question;
-        //var choicenode = document.createElement("div")
-
-        
-    
-        // for (var j = 0; i < questions[i].choices.length;j++){
-        //     var choices1 = document.createElement("button");
-        //     console.log(questions[i].choices[j])
-        //     choices1.value = questions[i].choices[j];
-        //     choices1.textContent = questions[i].choices[j];
-        //     choicenode.append(choices1);
-            
-        // }
-        //question1.append(choicenode)
-        //quiz.append(question1);
-    
-
-    
-	 questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
+     questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
      opt1.textContent = q.choices[0]
 	 opt2.textContent = q.choices[1];
 	 opt3.textContent = q.choices[2];
